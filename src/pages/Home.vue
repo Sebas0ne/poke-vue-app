@@ -1,8 +1,15 @@
 <template>
   <div class="home">
     <v-container class="mt-4">
-      <v-container class="mt-4">
+      <v-container class="d-flex justify-space-between mt-4">
         <H5Title title="Bienvenido a la Poke App."></H5Title>
+        <v-btn class="mx-2" fab dark color="indigo">
+          <router-link :to="{ name: 'about' }">
+            <v-icon>
+              mdi-plus
+            </v-icon>
+          </router-link>
+        </v-btn>
       </v-container>
     </v-container>
   </div>
