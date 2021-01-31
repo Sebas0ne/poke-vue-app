@@ -7,7 +7,7 @@ import routes from "./routes";
 import { sync } from "vuex-router-sync";
 import { checkIfTokenNeedsRefresh } from "@/utils/utils.js";
 import { checkForUpdates } from "@/utils/updates.js";
-import * as types from "@/store/mutation-types";
+// import * as types from "@/store/mutation-types";
 
 Vue.use(Router);
 Vue.use(Meta);
@@ -62,8 +62,8 @@ async function beforeEach(to, from, next) {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
   const isTokenSet = store.getters.isTokenSet;
   checkIfTokenNeedsRefresh();
-  store.commit(types.SUCCESS, null);
-  store.commit(types.ERROR, null);
+  // store.commit(types.SUCCESS, null);
+  // store.commit(types.ERROR, null);
 
   try {
     // Get the matched components and resolve them.

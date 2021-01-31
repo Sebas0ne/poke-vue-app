@@ -1,7 +1,7 @@
 import * as types from "@/store/mutation-types";
-import store from "@/store";
+// import store from "@/store";
 import i18n from "@/plugins/i18n";
-import { loadLocale } from "@/plugins/veevalidate";
+// import { loadLocale } from "@/plugins/veevalidate";
 
 const getters = {
   locale: state => state.locale
@@ -9,10 +9,10 @@ const getters = {
 
 const actions = {
   setLocale({ commit }, payload) {
-    store.commit(types.SUCCESS, null);
-    store.commit(types.ERROR, null);
+    // store.commit(types.SUCCESS, null);
+    // store.commit(types.ERROR, null);
     i18n.locale = payload;
-    loadLocale(payload);
+    // loadLocale(payload);
     window.localStorage.setItem("locale", JSON.stringify(payload));
     commit(types.SET_LOCALE, payload);
   }

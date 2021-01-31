@@ -16,6 +16,16 @@ export default [
     component: page("About.vue")
   },
   {
+    path: "/game",
+    name: "game",
+    component: page("Game.vue")
+  },
+  {
+    path: "/pokedex",
+    name: "pokedex",
+    component: page("PokedexView.vue")
+  },
+  {
     path: "/*",
     name: "*",
     component: page("Pagenotfound.vue")

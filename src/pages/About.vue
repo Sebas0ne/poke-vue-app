@@ -1,36 +1,65 @@
 <template>
   <div class="about">
-    <v-container class="mt-4">
+    <v-container class="d-flex justify-space-between mt-4">
       <v-container class="mt-4">
         <H5Title title="Lista de pokemones."></H5Title>
+        <InnerLine />
       </v-container>
-      <div v-for="pokemones in poke" class="pokemones" v-bind:key="pokemones">
-        <v-card class="mx-auto" max-width="400" tile>
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title>{{ pokemones.name }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-card>
-      </div>
+    </v-container>
+    <div class="text-center">
+      <v-pagination
+        color="secondary"
+        v-model="pagination.page"
+        :length="pagination.pages"
+        @input="fetchData"
+        circle
+      ></v-pagination>
+    </div>
+    <v-container>
+      <v-row>
+        <v-col md="3" v-for="(pokemon, index) in pokemones" :key="index">
+          <card-pokemon-unit :item="pokemon" />
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import CardPokemonUnit from "../components/partials/about/CardPokemonUnit.vue";
 
 export default {
+  components: { CardPokemonUnit },
   name: "About",
+  layout: "burguer-content",
   data() {
     return {
-      poke: null
+      pokemones: [],
+      pagination: {
+        page: 1,
+        offset: 1,
+        limit: 12,
+        totalItems: 0,
+        pages: 1
+      }
     };
   },
-  mounted() {
-    axios
-      .get("https://pokeapi.co/api/v2/pokemon/")
-      .then(response => (this.poke = response.data.results));
+  async mounted() {
+    await this.fetchData();
+  },
+  methods: {
+    async fetchData() {
+      this.pagination.offset += 12;
+      const pokemones = await axios.get("https://pokeapi.co/api/v2/pokemon/", {
+        params: this.pagination
+      });
+      this.pokemones = pokemones.data.results;
+      const items = pokemones.data.count;
+      const pages = Math.ceil(items / this.pagination.limit);
+      this.pagination.pages = pages;
+      this.pagination.totalItems = pokemones.data.count;
+    }
   }
 };
 </script>
