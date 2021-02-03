@@ -6,7 +6,7 @@
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn
-              class="mx-2"
+              class="pokeTheme mx-2"
               fab
               dark
               color="secondary"
@@ -14,7 +14,7 @@
               v-bind="attrs"
               v-on="on"
             >
-              <v-icon>
+              <v-icon color="pokeThemeSecondary">
                 mdi-plus
               </v-icon>
             </v-btn>

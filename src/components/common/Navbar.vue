@@ -16,7 +16,7 @@
       <v-dialog transition="dialog-bottom-transition" max-width="600">
         <template v-slot:activator="{ on, attrs }">
           <v-btn target="_blank" text v-bind="attrs" v-on="on">
-            <v-icon>mdi-checkbox-marked-circle</v-icon>
+            <v-icon color="pokeTheme">mdi-checkbox-marked-circle</v-icon>
           </v-btn>
         </template>
         <template v-slot:default="dialog">
