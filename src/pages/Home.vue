@@ -22,15 +22,13 @@
           <span>Click para ingresar a la app.</span>
         </v-tooltip>
       </v-container>
-      <v-row>
-        <v-img
-          alt="Gif de la evolución de Sharizar"
-          id="landing_sharizar"
-          class="shrink mr-2"
-          contain
-          src="@/assets/sharizar.gif"
-        />
-      </v-row>
+      <v-img
+        alt="Gif de la evolución de Sharizar"
+        id="landing_sharizar"
+        class="shrink mr-2"
+        contain
+        src="@/assets/pikachu_adict.gif"
+      />
     </v-container>
     <div class="img_poke_landing"></div>
   </div>
@@ -47,14 +45,19 @@ export default {
       alignments: ["start"]
     };
   },
+  mounted() {
+    this.themeSoudtrack();
+  },
   methods: {
     listPokemon() {
       this.$router.push("about");
+    },
+    themeSoudtrack() {
+      var audio = new Audio(require("@/assets/pokedex_theme.mp3"));
+      audio.play();
+      console.log("=== AUDIO ===");
     }
   }
-  // components: {
-  //   Main
-  // }
 };
 </script>
 

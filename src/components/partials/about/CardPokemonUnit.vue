@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-sheet class="pa-3" v-if="loading === true">
+    <v-sheet class="pa-5" v-if="loading === true">
       <v-skeleton-loader
         class="mx-auto"
-        max-width="300"
+        max-width="600"
         type="card"
       ></v-skeleton-loader>
     </v-sheet>
@@ -18,7 +18,7 @@
         <v-tooltip top>
           <template v-slot:activator="{ on, attrs }">
             <v-btn
-              class="mx-2"
+              class="pokeTheme mx-2"
               fab
               dark
               small
@@ -26,7 +26,7 @@
               v-bind="attrs"
               v-on="on"
             >
-              <v-icon>
+              <v-icon color="pokeThemeSecondary">
                 mdi-plus
               </v-icon>
             </v-btn>
