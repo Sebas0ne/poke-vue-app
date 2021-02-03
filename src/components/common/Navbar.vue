@@ -21,11 +21,12 @@
         </template>
         <template v-slot:default="dialog">
           <v-card>
-            <v-toolbar color="secondary" dark>
-              Sebastián Albán.
-            </v-toolbar>
+            <v-toolbar color="secondary" dark></v-toolbar>
             <v-card-text>
-              <div class="text-h4 pa-10">Bienvenido a la Poke App!</div>
+              <div class="text-h5 pa-5">
+                Poke app es mostrar información de Pokemon utilizando la Poke
+                api. Hecha por un fan de Pokemon para fans de Pokemon.
+              </div>
             </v-card-text>
             <v-card-actions class="justify-end">
               <v-btn text @click="dialog.value = false">Cerrar</v-btn>
