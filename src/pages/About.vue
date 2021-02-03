@@ -6,15 +6,6 @@
         <InnerLine />
       </v-container>
     </v-container>
-    <div class="text-center">
-      <v-pagination
-        color="secondary"
-        v-model="pagination.page"
-        :length="pagination.pages"
-        @input="fetchData"
-        circle
-      ></v-pagination>
-    </div>
     <v-container>
       <v-row>
         <v-col md="3" v-for="(pokemon, index) in pokemones" :key="index">
@@ -22,6 +13,16 @@
         </v-col>
       </v-row>
     </v-container>
+    <div class="text-center">
+      <v-pagination
+        color="secondary"
+        v-model="pagination.page"
+        :length="pagination.pages"
+        :total-visible="7"
+        @input="fetchData"
+        circle
+      ></v-pagination>
+    </div>
   </div>
 </template>
 

@@ -9,13 +9,6 @@
 
 <script>
 export default {
-  name: "Stat",
-  props: {
-    // PropTypes on Vue
-    item: {
-      type: Object,
-      default: () => {}
-    }
-  }
+  name: "Stat"
 };
 </script>

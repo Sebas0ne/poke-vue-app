@@ -15,11 +15,24 @@
 
       <v-card-title class="d-flex justify-space-between mt-4">
         {{ poke.data.name.toUpperCase() }}
-        <v-btn class="mx-2" fab dark small color="secondary">
-          <v-icon>
-            mdi-plus
-          </v-icon>
-        </v-btn>
+        <v-tooltip top>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              class="mx-2"
+              fab
+              dark
+              small
+              color="secondary"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>
+                mdi-plus
+              </v-icon>
+            </v-btn>
+          </template>
+          <span>Más información</span>
+        </v-tooltip>
       </v-card-title>
 
       <v-card-text>

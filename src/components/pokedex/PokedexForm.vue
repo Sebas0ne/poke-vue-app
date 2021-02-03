@@ -1,12 +1,5 @@
 <template>
-  <form
-    class="pokemon-form"
-    v-on:submit="
-      {
-        handleSubmit;
-      }
-    "
-  >
+  <form class="pokemon-form" on:submit="{handleSubmit}">
     <input
       class="pokemon-input"
       type="text"
@@ -35,6 +28,19 @@ export default {
         ? pokemonName.toLowerCase()
         : pokemonName;
       this.$emit("submit", newPokemonId);
+    },
+    getPokemon() {
+      //...
+    },
+    handleSubmit(pokemonId) {
+      if (pokemonId !== "") {
+        this.error = false;
+        this.loading = true;
+        this.pokemonId = pokemonId;
+        this.getPokemon();
+        return;
+      }
+      this.error = true;
     }
   }
 };

@@ -1,32 +1,30 @@
 <template>
-  <div id="body_complete">
-    <div class="pokedex" id="body">
-      <div class="pokedex-left">
-        <div class="pokedex-left-top">
-          <div class="light is-sky is-big in-animated" />
-          <div class="light is-red" />
-          <div class="light is-yellow" />
-          <div class="light is-green" />
-        </div>
-        <div class="pokedex-screen-container">
-          <pokedex-screen
-            v-bind:pokemon="pokemon"
-            v-bind:loading="loading"
-            v-bind:error="error"
-          />
-        </div>
-        <div class="pokedex-left-bottom">
-          <div class="pokedex-left-bottom-lights">
-            <div class="light is-blue is-medium" />
-            <div class="light is-green is-large" />
-            <div class="light is-orange is-large" />
-          </div>
-          <pokedex-form />
-        </div>
+  <div class="pokedex" id="body">
+    <div class="pokedex-left">
+      <div class="pokedex-left-top">
+        <div class="light is-sky is-big in-animated" />
+        <div class="light is-red" />
+        <div class="light is-yellow" />
+        <div class="light is-green" />
       </div>
-      <div class="pokedex-right-front" />
-      <div class="pokedex-right-back" />
+      <div class="pokedex-screen-container">
+        <pokedex-screen
+          v-bind:pokemon="pokemon"
+          v-bind:loading="loading"
+          v-bind:error="error"
+        />
+      </div>
+      <div class="pokedex-left-bottom">
+        <div class="pokedex-left-bottom-lights">
+          <div class="light is-blue is-medium" />
+          <div class="light is-green is-large" />
+          <div class="light is-orange is-large" />
+        </div>
+        <pokedex-form v-on:submit="handleSubmit($event)" />
+      </div>
     </div>
+    <div class="pokedex-right-front" />
+    <div class="pokedex-right-back" />
   </div>
 </template>
 
@@ -43,7 +41,7 @@ export default {
   },
   data() {
     return {
-      // error: false,
+      error: false,
       loading: true,
       pokemon: null,
       pokemonId: Math.floor(Math.random() * 806 + 1).toString()
