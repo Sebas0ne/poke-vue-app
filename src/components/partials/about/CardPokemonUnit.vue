@@ -38,6 +38,9 @@
       <v-card-text>
         <div class="grey--text ml-1">
           <ul>
+            <li>EXP: {{ poke.data.base_experience }}</li>
+          </ul>
+          <ul>
             <li>Altura: {{ poke.data.height }}</li>
           </ul>
           <ul>
@@ -48,21 +51,10 @@
 
       <v-divider class="mx-4"></v-divider>
 
-      <v-card-title
-        >Estadisticas | EXP ( {{ poke.data.base_experience }} )</v-card-title
-      >
-      <v-card-text>
-        <v-chip-group column active-class="secondary accent-4 white--text">
-          <v-chip
-            v-for="(pokemones, index) in poke.data.stats"
-            class="pokemones"
-            :key="index"
-            >{{ pokemones.stat.name.toUpperCase() }} :
-            {{ pokemones.base_stat }}</v-chip
-          >
-        </v-chip-group>
-      </v-card-text>
-    </v-card>
+      <v-card-title class="justify-center">
+        TIPO: {{ poke.data.types[0].type.name.toUpperCase() }}
+      </v-card-title>
+</v-card>
   </div>
 </template>
 
