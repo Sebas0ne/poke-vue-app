@@ -28,6 +28,6 @@ export default [
   {
     path: "/*",
     name: "*",
-    component: page("Pagenotfound.vue")
+    component: page("PageNotFound.vue")
   }
 ];

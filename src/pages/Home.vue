@@ -67,7 +67,7 @@ export default {
     position: absolute;
     background-image: url("https://steemitimages.com/p/JvFFVmatwWHRfvmtd53nmEJ94xpKydwmbSC5H5svBACH7y78ZHMRmMqDV2AcjNkGNwnpYBAdgqF94io27tUAtTtKjEpW23k45dBCCahQG1kmHDNLZ9aaoiKAV7hgw4wpm8dbgvKQ1k?format=match&mode=fit&width=640");
     background-repeat: repeat-x;
-    bottom: 60px;
+    bottom: 65px;
     height: 150px;
     width: 100%;
   }
@@ -82,7 +82,7 @@ export default {
     position: absolute;
     background-image: url("https://steemitimages.com/p/JvFFVmatwWHRfvmtd53nmEJ94xpKydwmbSC5H5svBACH7y78ZHMRmMqDV2AcjNkGNwnpYBAdgqF94io27tUAtTtKjEpW23k45dBCCahQG1kmHDNLZ9aaoiKAV7hgw4wpm8dbgvKQ1k?format=match&mode=fit&width=640");
     background-repeat: repeat-x;
-    bottom: 60px;
+    bottom: 65px;
     height: 150px;
     width: 100%;
   }
@@ -97,7 +97,7 @@ export default {
     position: absolute;
     background-image: url("https://steemitimages.com/p/JvFFVmatwWHRfvmtd53nmEJ94xpKydwmbSC5H5svBACH7y78ZHMRmMqDV2AcjNkGNwnpYBAdgqF94io27tUAtTtKjEpW23k45dBCCahQG1kmHDNLZ9aaoiKAV7hgw4wpm8dbgvKQ1k?format=match&mode=fit&width=640");
     background-repeat: repeat-x;
-    bottom: 60px;
+    bottom: 65px;
     height: 150px;
     width: 100%;
   }
@@ -112,7 +112,7 @@ export default {
     position: absolute;
     background-image: url("https://steemitimages.com/p/JvFFVmatwWHRfvmtd53nmEJ94xpKydwmbSC5H5svBACH7y78ZHMRmMqDV2AcjNkGNwnpYBAdgqF94io27tUAtTtKjEpW23k45dBCCahQG1kmHDNLZ9aaoiKAV7hgw4wpm8dbgvKQ1k?format=match&mode=fit&width=640");
     background-repeat: repeat-x;
-    bottom: 60px;
+    bottom: 65px;
     height: 150px;
     width: 100%;
   }
