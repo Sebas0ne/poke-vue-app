@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Menu left width="300">
+    <Menu left width="300" :closeOnNavigation="true">
       <a @click="homeBack">
         <span>HOME</span>
       </a>
