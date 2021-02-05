@@ -20,24 +20,24 @@
         v-bind:alt="pokemon.name"
       />
       <ul class="pokemon-stats">
-        <Stat
-          v-bind:item="item"
-          v-for="item in pokemon.stats"
-          v-bind:key="item.stat.name"
-        />
+        <li
+          class="pokemon-stat"
+          v-for="(pokemon, index) in pokemon.stats"
+          :key="index"
+        >
+          <span class="stat-name">
+            <b>{{ pokemon.stat.name }}: </b>
+          </span>
+          <span>{{ pokemon.base_stat }}</span>
+        </li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
-import Stat from "@/components/pokedex/Stat.vue";
-
 export default {
   name: "PokedexScreen",
-  components: {
-    Stat
-  },
   props: {
     // PropTypes on Vue
     pokemon: {

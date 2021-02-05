@@ -88,7 +88,7 @@ export default {
 
 #body {
   margin: 5;
-  margin-top: 5%;
+  margin-top: 30%;
   background-color: var(--dark-red);
 }
 
@@ -363,7 +363,7 @@ ul {
   grid-area: stats;
 }
 .pokemon-stat {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .pokedex-no-screen {
   width: 100%;

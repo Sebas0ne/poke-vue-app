@@ -2,7 +2,7 @@
   <div class="home">
     <v-container class="mt-4">
       <v-container class="d-flex justify-space-between mt-4">
-        <H5Title title="Bienvenido a la Poke App."></H5Title>
+        <H5Title title="HOME | POKE APP"></H5Title>
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn

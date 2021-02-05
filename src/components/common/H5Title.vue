@@ -10,7 +10,7 @@ export default {
 
 <style scoped>
 #h5-tittle {
-  font-size: 2em;
+  font-size: 1.8em;
   color: #7a7a7a;
 }
 </style>

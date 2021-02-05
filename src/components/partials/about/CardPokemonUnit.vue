@@ -41,10 +41,10 @@
             <li>EXP: {{ poke.data.base_experience }}</li>
           </ul>
           <ul>
-            <li>Altura: {{ poke.data.height }}</li>
+            <li>Heigth: {{ poke.data.height }}</li>
           </ul>
           <ul>
-            <li>Peso: {{ poke.data.weight }}</li>
+            <li>Weight: {{ poke.data.weight }}</li>
           </ul>
         </div>
       </v-card-text>
@@ -52,9 +52,9 @@
       <v-divider class="mx-4"></v-divider>
 
       <v-card-title class="justify-center">
-        TIPO: {{ poke.data.types[0].type.name.toUpperCase() }}
+        TYPE: {{ poke.data.types[0].type.name.toUpperCase() }}
       </v-card-title>
-</v-card>
+    </v-card>
   </div>
 </template>
 

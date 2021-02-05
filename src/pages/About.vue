@@ -2,7 +2,7 @@
   <div class="about">
     <v-container class="d-flex justify-space-between mt-4">
       <v-container class="mt-4">
-        <H5Title title="Lista de pokemones."></H5Title>
+        <H5Title title="LIST OF POKEMONS"></H5Title>
         <InnerLine />
       </v-container>
     </v-container>
