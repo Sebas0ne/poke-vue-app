@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Menu right width="300">
+    <Menu left width="300">
       <a @click="homeBack">
         <span>HOME</span>
       </a>
@@ -14,7 +14,7 @@
         <span>POKEDEX</span>
       </a>
     </Menu>
-    <main class="pb-2" id="page-wrap">
+    <main class="mt-10" id="page-wrap">
       <transition name="page" mode="out-in">
         <router-view class="lg:pt-4" />
       </transition>
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { ScaleDown as Menu } from "vue-burger-menu"; // import the CSS transitions you wish to use, in this case we are using `Slide`
+import { PushRotate as Menu } from "vue-burger-menu"; // import the CSS transitions you wish to use, in this case we are using `Slide`
 
 export default {
   components: {
